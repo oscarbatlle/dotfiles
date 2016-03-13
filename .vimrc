@@ -31,6 +31,16 @@ set guioptions-=R
 set hlsearch
 "Incremental Search
 set incsearch
+"---------------Split Management---------------"
+"Set Horizontal Split Below.
+set splitbelow
+"Set Vertical Split to the Right.
+set splitright
+"Set Mappings to Navigate Splits.
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
 "-------------------Mappings-------------------"
 "Make it easy to edit the Vimrc file.
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
