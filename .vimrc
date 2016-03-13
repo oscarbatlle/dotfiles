@@ -30,6 +30,8 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
+"I don't want Gui tabs :@.
+set guioptions-=e
 "--------------------Search--------------------"
 "Highlight Search
 set hlsearch
@@ -50,26 +52,36 @@ nmap <C-L> <C-W><C-L>
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 "Add simple Search Highlight removal.
 nmap <Leader><space> :nohlsearch<cr>
-"Make NERDTree easier to toggle.
-nmap <C-d> :NERDTreeToggle<cr>
-"Make it easier to navigate with CtrlP
-nmap <C-R> :CtrlPBufTag<cr>
-"List of recently used files.
-nmap <C-e> :CtrlPMRUFiles<cr>
+"Find a Tag.
+nmap <Leader>f :tag<space>
 "-------------------Plugins--------------------"
 "/
 "/ CtrlP
 "/
-"List the files to ignore
+"List the files to ignore.
 let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
+"Make it easier to navigate with CtrlP.
+nmap <C-R> :CtrlPBufTag<cr>
+"List of recently used files.
+nmap <C-e> :CtrlPMRUFiles<cr>
 "/
 "/ NERDTree
 "/
 "Avoid Vinegar conflicts.
 let NERDTreeHijackNetrw = 0
+"Make NERDTree easier to toggle.
+nmap <C-d> :NERDTreeToggle<cr>
 "----------------Auto-Commands-----------------"
 "Automatically source the Vimrc file on save.
 augroup autosourcing
 	autocmd!
 	autocmd BufWritePost .vimrc source %
 augroup END
+"-------------------Notes-Tips-----------------"
+"/
+"/ CTAGS
+"/
+"ctags -R -> Generate tags for a particular project.
+"NOTE: Add tags/ to your .gitignore file.
+"CTRL + ] -> Takes you to where the method was defined.  
+"CTRL + ^ -> Previous edited location.
