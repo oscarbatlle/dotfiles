@@ -50,6 +50,8 @@ nmap <C-L> <C-W><C-L>
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 "Add simple Search Highlight removal.
 nmap <Leader><space> :nohlsearch<cr>
+"Make NERDTree easier to toggle.
+nmap <C-d> :NERDTreeToggle<cr>
 "----------------Auto-Commands-----------------"
 "Automatically source the Vimrc file on save.
 augroup autosourcing
