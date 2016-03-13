@@ -4,6 +4,10 @@
 " | Blog: http://oscarbatlle.com |
 " ┕------------------------------┙
 
+"I want the latest Vim settings/options ;).
+set nocompatible
+"Set plugins directory
+so ~/.vim/plugins.vim
 "Enable syntax highlighting.
 syntax enable
 "Enable delete key on insert mode.
