@@ -106,7 +106,7 @@ let g:grep_cmd_opts = '--line-numbers --noheading'
 " Automatic PSR-2 Formatting
 " NOTE: Requirements (php-cs-fixer) -> composer global require fabpot/php-cs-fixer
 let g:php_cs_fixer_level = "psr2"
-nnoremap <silent><C-l> :call PhpCsFixerFixFile()<CR>
+nnoremap <silent><Leader>l :call PhpCsFixerFixFile()<CR>
 "----------------Laravel-Specific--------------"
 nmap <Leader>lr :e app/Http/routes.php<cr>
 nmap <Leader>lc :e config/app.php<cr>
