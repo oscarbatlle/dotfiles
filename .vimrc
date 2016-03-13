@@ -118,6 +118,10 @@ function! IPhpExpandClass()
 	endfunction
 	autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
 	autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
+
+"Sort PHP use statements
+"http://stackoverflow.com/questions/11531073/how-do-you-sort-a-range-of-lines-by-length
+vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>'" }'"
 "-------------------Notes-Tips-----------------"
 "/
 "/ CTAGS
@@ -146,5 +150,6 @@ function! IPhpExpandClass()
 "/
 "NOTE: <Leader>n will import the class in NORMAL/INSERT mode.
 "NOTE: <Leader>nf will import the fully qualify class.
-"NOTE: Alphabetical order -> select all of the classes with VISUAL MODE and
-"type sort.
+"NOTE: Order by Length -> Select all of the classes with VISUAL MODE and
+"<Leader>su
+
