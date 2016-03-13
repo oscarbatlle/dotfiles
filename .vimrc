@@ -85,3 +85,7 @@ augroup END
 "NOTE: Add tags/ to your .gitignore file.
 "CTRL + ] -> Takes you to where the method was defined.  
 "CTRL + ^ -> Previous edited location.
+"/
+"/ Reminders
+"/
+"Press 'zz' to instantly center the line where the cursor is located.
