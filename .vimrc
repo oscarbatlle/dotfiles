@@ -22,6 +22,11 @@ set noerrorbells visualbell t_vb=
 set autowriteall
 "Set desired autocompletion
 set complete=.,w,b,u
+"Tabs, Indents and Spaces
+set tabstop=8
+set expandtab
+set softtabstop=4
+set shiftwidth=4
 "-------------------Visuals--------------------"
 "Set Scheme Color.
 colorscheme atom-dark-256 
@@ -79,7 +84,10 @@ let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
 nmap <C-R> :CtrlPBufTag<cr>
 "List of recently used files.
 nmap <C-e> :CtrlPMRUFiles<cr>
-"/
+"/set tabstop=8
+set expandtab
+set softtabstop=4
+set shiftwidth=4
 "/ NERDTree
 "/
 "Avoid Vinegar conflicts.
@@ -109,6 +117,8 @@ nmap <Leader>lfj :CtrlP<cr>app/Jobs/
 nmap <Leader>lfm :CtrlP<cr>app/
 nmap <Leader>lfv :CtrlP<cr>resources/views/
 nmap <Leader><Leader>v :e resources/views/<cr>
+"Initialize Fields
+let @a="yiw/}O		$	pa = $pa;?constructOprotected $pa;/construct/\", "
 "----------------Auto-Commands-----------------"
 "Automatically source the Vimrc file on save.
 augroup autosourcing
