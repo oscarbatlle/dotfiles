@@ -15,6 +15,10 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'rking/ag.vim'
 "---------Search-And-Replace---------
 Plugin 'skwp/greplace.vim'
+"--------------Snippets--------------
+Plugin 'msanders/snipmate.vim'
+"-Quoting/Parenthesizing made simple-
+Plugin 'tpope/vim-surround'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

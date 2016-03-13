@@ -16,6 +16,8 @@ set backspace=indent,eol,start
 let mapleader = ','
 "Disable line numbers.
 set nonumber
+"Turn off the Error Bell
+set noerrorbells visualbell t_vb=
 "-------------------Visuals--------------------"
 "Set Scheme Color.
 colorscheme atom-dark-256 
@@ -57,6 +59,8 @@ nmap <C-L> <C-W><C-L>
 "-------------------Mappings-------------------"
 "Make it easy to edit the Vimrc file.
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
+"Make it easy to edit snippets.
+nmap <Leader>es :e ~/.vim/snippets/
 "Add simple Search Highlight removal.
 nmap <Leader><space> :nohlsearch<cr>
 "Find a Tag.
@@ -84,6 +88,16 @@ nmap <C-d> :NERDTreeToggle<cr>
 "I want to use 'Ag' for the Search ;).
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
+"----------------Laravel-Specific--------------"
+nmap <Leader>lr :e app/Http/routes.php<cr>
+nmap <Leader>lc :e config/app.php<cr>
+nmap <Leader>le :e .env<cr>
+nmap <Leader>lm :!php artisan make:
+nmap <Leader>lfc :CtrlP<cr>app/Http/Controllers/
+nmap <Leader>lfj :CtrlP<cr>app/Jobs/
+nmap <Leader>lfm :CtrlP<cr>app/
+nmap <Leader>lfv :CtrlP<cr>resources/views/
+nmap <Leader><Leader>v :e resources/views/<cr>
 "----------------Auto-Commands-----------------"
 "Automatically source the Vimrc file on save.
 augroup autosourcing
@@ -105,3 +119,11 @@ augroup END
 "GSearch to search really fast.
 "%s/pattern/replace -> Find and replace.
 "Greplace -> Replace in all of the files.
+"/
+"/ Surrounding
+"/
+"Change surrounding e.g.: cs ' " to change single quotes to double quotes
+"Delete surrounding e.g: ds ( to delete the surrounding ()
+"[HTML]Delete surrounding tag e.g: dst will delete the surrounding tag
+"[HTML]Change surrounding tag e.g: cst will change the surrounding tag
+"[HTML]Add surrounding tag e.g: (Select all with Visual Mode) + S + yourtag

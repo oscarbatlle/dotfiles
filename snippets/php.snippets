@@ -1,0 +1,47 @@
+snippet met
+	public function ${1}()
+	{
+		${2}
+	}
+
+snippet pmet
+	protected function ${1}()
+	{	
+		${2}
+	}
+
+snippet smet
+	public static method ${1}()
+	{
+		${2}
+	}
+
+snippet cmet
+	public function _construct(${1}) {
+		${2}
+	}
+
+snippet rg
+	Route::get('${1}', '${2}');
+
+snippet rga
+	Route::get('${1}', function() {
+		${2}
+	});
+
+snippet rp
+	Route::post('${1}', '${2}');
+
+snippet rpa
+	Route::post('{$1}', function() {
+		${2}
+	});
+
+snippet rput
+	Route::put('${1}', '${2}');
+
+snippet rr
+	Route::resource('${1}', '${2}');
+
+snippet $
+	$this->${1}
