@@ -19,6 +19,10 @@ Plugin 'skwp/greplace.vim'
 Plugin 'msanders/snipmate.vim'
 "-Quoting/Parenthesizing made simple-
 Plugin 'tpope/vim-surround'
+"------------PHP-Syntax--------------
+Plugin 'StanAngeloff/php.vim'
+"------Insert-Use-Statements---------
+Plugin 'vim-php-namespace'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

@@ -104,6 +104,20 @@ augroup autosourcing
 	autocmd!
 	autocmd BufWritePost .vimrc source %
 augroup END
+
+function! IPhpInsertUse()
+	    call PhpInsertUse()
+	        call feedkeys('a',  'n')
+	endfunction
+	autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
+	autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
+	
+function! IPhpExpandClass()
+	    call PhpExpandClass()
+	    call feedkeys('a', 'n')
+	endfunction
+	autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
+	autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
 "-------------------Notes-Tips-----------------"
 "/
 "/ CTAGS
@@ -127,3 +141,10 @@ augroup END
 "[HTML]Delete surrounding tag e.g: dst will delete the surrounding tag
 "[HTML]Change surrounding tag e.g: cst will change the surrounding tag
 "[HTML]Add surrounding tag e.g: (Select all with Visual Mode) + S + yourtag
+"/
+"/ Add use namespace
+"/
+"NOTE: <Leader>n will import the class in NORMAL/INSERT mode.
+"NOTE: <Leader>nf will import the fully qualify class.
+"NOTE: Alphabetical order -> select all of the classes with VISUAL MODE and
+"type sort.
