@@ -16,13 +16,19 @@ Plugin 'rking/ag.vim'
 "---------Search-And-Replace---------
 Plugin 'skwp/greplace.vim'
 "--------------Snippets--------------
-Plugin 'msanders/snipmate.vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
 "-Quoting/Parenthesizing made simple-
 Plugin 'tpope/vim-surround'
 "------------PHP-Syntax--------------
 Plugin 'StanAngeloff/php.vim'
 "------Insert-Use-Statements---------
 Plugin 'vim-php-namespace'
+"----------Auto-Completion-----------
+Plugin 'ervandew/supertab'
+"-----------Automatic-PSR-2----------
+Plugin 'stephpy/vim-php-cs-fixer'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

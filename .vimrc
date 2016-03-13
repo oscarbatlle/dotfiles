@@ -18,6 +18,10 @@ let mapleader = ','
 set nonumber
 "Turn off the Error Bell
 set noerrorbells visualbell t_vb=
+"Automatically write the file when switching buffers. 
+set autowriteall
+"Set desired autocompletion
+set complete=.,w,b,u
 "-------------------Visuals--------------------"
 "Set Scheme Color.
 colorscheme atom-dark-256 
@@ -88,6 +92,13 @@ nmap <C-d> :NERDTreeToggle<cr>
 "I want to use 'Ag' for the Search ;).
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
+"/
+"/ vim-php-cs-fixer.vim
+"/
+" Automatic PSR-2 Formatting
+" NOTE: Requirements (php-cs-fixer) -> composer global require fabpot/php-cs-fixer
+let g:php_cs_fixer_level = "psr2"
+nnoremap <silent><C-l> :call PhpCsFixerFixFile()<CR>
 "----------------Laravel-Specific--------------"
 nmap <Leader>lr :e app/Http/routes.php<cr>
 nmap <Leader>lc :e config/app.php<cr>
