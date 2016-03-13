@@ -14,8 +14,8 @@ syntax enable
 set backspace=indent,eol,start
 "The default mapleader is '\' but a comma ',' is much better ;).
 let mapleader = ','
-"Let's active line numbers.
-set number
+"Disable line numbers.
+set nonumber
 "-------------------Visuals--------------------"
 "Set Scheme Color.
 colorscheme atom-dark-256 
@@ -25,6 +25,8 @@ set t_CO=256
 set linespace=15
 "Set gui font.
 set guifont=Fira_Code:h13
+"Set background color for line numbers.
+highlight LineNr ctermfg=grey ctermbg=bg
 "Remove scrollbars.
 set guioptions-=l
 set guioptions-=L
@@ -32,6 +34,11 @@ set guioptions-=r
 set guioptions-=R
 "I don't want Gui tabs :@.
 set guioptions-=e
+"Set left padding.
+set foldcolumn=2
+hi foldcolumn ctermbg=bg
+"Set color for vetical bar / No borders.
+hi vertsplit ctermbg=bg ctermfg=bg
 "--------------------Search--------------------"
 "Highlight Search
 set hlsearch
@@ -71,6 +78,12 @@ nmap <C-e> :CtrlPMRUFiles<cr>
 let NERDTreeHijackNetrw = 0
 "Make NERDTree easier to toggle.
 nmap <C-d> :NERDTreeToggle<cr>
+"/
+"/ Greplace.vim
+"/
+"I want to use 'Ag' for the Search ;).
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
 "----------------Auto-Commands-----------------"
 "Automatically source the Vimrc file on save.
 augroup autosourcing
@@ -89,3 +102,6 @@ augroup END
 "/ Reminders
 "/
 "Press 'zz' to instantly center the line where the cursor is located.
+"GSearch to search really fast.
+"%s/pattern/replace -> Find and replace.
+"Greplace -> Replace in all of the files.
