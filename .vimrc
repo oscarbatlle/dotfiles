@@ -52,6 +52,21 @@ nmap <Leader>ev :tabedit $MYVIMRC<cr>
 nmap <Leader><space> :nohlsearch<cr>
 "Make NERDTree easier to toggle.
 nmap <C-d> :NERDTreeToggle<cr>
+"Make it easier to navigate with CtrlP
+nmap <C-R> :CtrlPBufTag<cr>
+"List of recently used files.
+nmap <C-e> :CtrlPMRUFiles<cr>
+"-------------------Plugins--------------------"
+"/
+"/ CtrlP
+"/
+"List the files to ignore
+let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
+"/
+"/ NERDTree
+"/
+"Avoid Vinegar conflicts.
+let NERDTreeHijackNetrw = 0
 "----------------Auto-Commands-----------------"
 "Automatically source the Vimrc file on save.
 augroup autosourcing
