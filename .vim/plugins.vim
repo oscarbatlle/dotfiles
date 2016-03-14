@@ -29,6 +29,9 @@ Plugin 'vim-php-namespace'
 Plugin 'ervandew/supertab'
 "-----------Automatic-PSR-2----------
 Plugin 'stephpy/vim-php-cs-fixer'
+"--------------Airlines--------------
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

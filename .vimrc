@@ -50,6 +50,9 @@ set foldcolumn=2
 hi foldcolumn ctermbg=bg
 "Set color for vetical bar / No borders.
 hi vertsplit ctermbg=bg ctermfg=bg
+"Enable status/tabline
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
 "--------------------Search--------------------"
 "Highlight Search
 set hlsearch
