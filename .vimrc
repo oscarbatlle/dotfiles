@@ -97,6 +97,8 @@ set shiftwidth=4
 let NERDTreeHijackNetrw = 0
 "Make NERDTree easier to toggle.
 nmap <C-d> :NERDTreeToggle<cr>
+"Display hidden files
+let NERDTreeShowHidden=1
 "/
 "/ Greplace.vim
 "/
@@ -110,6 +112,9 @@ let g:grep_cmd_opts = '--line-numbers --noheading'
 " NOTE: Requirements (php-cs-fixer) -> composer global require fabpot/php-cs-fixer
 let g:php_cs_fixer_level = "psr2"
 nnoremap <silent><Leader>l :call PhpCsFixerFixFile()<CR>
+nnoremap <silent><leader>la :call PhpCsFixerFixDirectory()<CR>
+"Avoid replacing App with app (Laravel)
+let g:php_cs_fixer_fixers_list = "-psr0"
 "----------------Laravel-Specific--------------"
 nmap <Leader>lr :e app/Http/routes.php<cr>
 nmap <Leader>lc :e config/app.php<cr>
