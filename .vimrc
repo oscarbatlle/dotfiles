@@ -99,6 +99,11 @@ let NERDTreeHijackNetrw = 0
 nmap <C-d> :NERDTreeToggle<cr>
 "Display hidden files
 let NERDTreeShowHidden=1
+"----------------------Git----------------------"
+nmap <Leader>ga :Gwrite<cr>
+nmap <Leader>gst :Gstatus<cr>
+nmap <Leader>gc :Gcommit<cr>
+nmap <Leader>gd :Gdiff<cr>
 "/
 "/ Greplace.vim
 "/
@@ -181,4 +186,3 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr
 "NOTE: <Leader>nf will import the fully qualify class.
 "NOTE: Order by Length -> Select all of the classes with VISUAL MODE and
 "<Leader>su
-
