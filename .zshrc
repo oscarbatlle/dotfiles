@@ -95,5 +95,10 @@ alias lsdashpro="ssh oscar@172.32.1.111"
 alias lsdashdev="ssh oscar@172.32.1.64"
 alias laravel="~/.composer/vendor/bin/laravel"
 alias vimrc="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
 alias vm="cd ~/Homestead; vagrant ssh"
+alias vmup="cd ~/Homestead; vagrant up"
+alias vmhalt="cd ~/Homestead; vagrant halt"
 alias tmconf="vim ~/.tmux.conf"
+# redefine prompt_context for hiding user@hostname
+prompt_context () {  }
