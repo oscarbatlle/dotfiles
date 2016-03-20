@@ -104,6 +104,12 @@ nmap <Leader>ga :Gwrite<cr>
 nmap <Leader>gst :Gstatus<cr>
 nmap <Leader>gc :Gcommit<cr>
 nmap <Leader>gd :Gdiff<cr>
+"--------------------Tabular--------------------"
+" Align equal signs and colons
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
 "/
 "/ Greplace.vim
 "/
