@@ -192,3 +192,7 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr
 "NOTE: <Leader>nf will import the fully qualify class.
 "NOTE: Order by Length -> Select all of the classes with VISUAL MODE and
 "<Leader>su
+"/
+"/ Emmet
+"/
+" Html5 = html:5 then type <c-y>, (Ctrly,)
