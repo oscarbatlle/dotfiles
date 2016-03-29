@@ -1,8 +1,8 @@
-" ┍------------------------------┑
-" | Author: Oscar Batlle         |
-" | Email: oscarbatlle@gmail.com |
-" | Blog: http://oscarbatlle.com |
-" ┕------------------------------┙
+" ##################################
+" || Author: Oscar Batlle         ||
+" || Email: oscarbatlle@gmail.com ||
+" || Blog: http://oscarbatlle.com ||
+" ##################################
 
 "I want the latest Vim settings/options ;).
 set nocompatible
