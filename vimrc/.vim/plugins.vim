@@ -38,6 +38,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 "---------------Emmet----------------
 Plugin 'mattn/emmet-vim'
+"---------------Syntax---------------
+Plugin 'scrooloose/syntastic'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
