@@ -4,6 +4,8 @@
 " || Blog: http://oscarbatlle.com ||
 " ##################################
 
+"I want to copy to the clipboard ;).
+set clipboard=unnamed
 "I want the latest Vim settings/options ;).
 set nocompatible
 "Set plugins directory
