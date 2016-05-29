@@ -38,8 +38,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 "---------------Emmet----------------
 Plugin 'mattn/emmet-vim'
-"---------------Syntax---------------
-Plugin 'scrooloose/syntastic'
 "---------------Indent---------------
 Plugin 'nathanaelkane/vim-indent-guides'
 " All of your Plugins must be added before the following line
