@@ -100,5 +100,7 @@ alias vm="cd ~/Homestead; vagrant ssh"
 alias vmup="cd ~/Homestead; vagrant up"
 alias vmhalt="cd ~/Homestead; vagrant halt"
 alias tmconf="vim ~/.tmux.conf"
+alias bitnami="ssh -i ~/.ssh/basic-east.pem ubuntu@52.90.32.102"
+alias piwik="ssh oscar@piwik.lsdash.co"
 # redefine prompt_context for hiding user@hostname
 prompt_context () {  }
