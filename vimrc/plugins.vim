@@ -8,7 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 "-------------Navigation-------------
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 "--------Auto-Close-Brackets---------
 Plugin 'jiangmiao/auto-pairs'
 "---------Super-Fast-Search----------

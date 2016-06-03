@@ -4,6 +4,14 @@
 " || Blog: http://oscarbatlle.com ||
 " ##################################
 
+"Fix statline
+if exists("g:loaded_statline_plugin")
+  finish
+endif
+let g:loaded_statline_plugin = 1
+"Set fancy symbols for powerline and airline
+let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
 "I want to copy to the clipboard ;).
 set clipboard=unnamed
 "I want the latest Vim settings/options ;).
