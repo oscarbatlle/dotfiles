@@ -1,5 +1,4 @@
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -39,7 +38,9 @@ Plugin 'godlygeek/tabular'
 "---------------Emmet----------------
 Plugin 'mattn/emmet-vim'
 "---------------Indent---------------
-Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'yggdroot/indentline'
+"--------------Syntastic-------------
+Plugin 'scrooloose/syntastic'
 "---------------Icons----------------
 Plugin 'ryanoasis/vim-devicons'
 " All of your Plugins must be added before the following line

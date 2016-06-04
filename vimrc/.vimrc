@@ -74,6 +74,7 @@ set incsearch
 set ts=2 sw=2 et
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
+let g:indentLine_color_term = 239
 "---------------Split Management---------------"
 "Set Horizontal Split Below.
 set splitbelow
