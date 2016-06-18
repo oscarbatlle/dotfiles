@@ -85,9 +85,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # optionally set DEFAULT_USER in ~/.zshrc to your regular username to hide the “user@hostname” info when you’re logged in as yourself on your local machine.
 DEFAULT_USER=thenext@hackbsd
+alias vim="/usr/local/bin/vim"
 alias cl="clear"
 alias gst="git status"
-alias orbapi="ssh oscar@172.32.1.124"
+alias orbapiold="ssh oscar@172.32.1.124"
+alias orbapi="ssh oscar@172.32.1.4"
 alias orbfrontend="ssh oscar@172.32.1.7"
 alias orbdevfrontend="ssh oscar@172.32.1.63"
 alias orbdevapi="ssh oscar@172.32.1.209"
