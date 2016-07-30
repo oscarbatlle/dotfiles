@@ -10,6 +10,10 @@ set encoding=utf8
 if exists("g:loaded_statline_plugin")
   finish
 endif
+"neo vim mouse support
+if !has('nvim')
+    set ttymouse=xterm2
+endif
 let g:loaded_statline_plugin = 1
 "Set fancy symbols for powerline and airline
 let g:Powerline_symbols = 'fancy'
@@ -144,7 +148,7 @@ call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
 call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
 call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
 call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
-"----------------------Git----------------------"
+"--------------Git-Fugitive---------------------"
 nmap <Leader>ga :Gwrite<cr>
 nmap <Leader>gst :Gstatus<cr>
 nmap <Leader>gc :Gcommit<cr>
@@ -163,6 +167,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+"---------------------CTAGS---------------------"
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 "/
 "/ Greplace.vim
 "/
