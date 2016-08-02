@@ -22,6 +22,8 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-surround'
 "------------PHP-Syntax--------------
 Plugin 'StanAngeloff/php.vim'
+"--------Javascript-Syntax-----------
+Plugin 'pangloss/vim-javascript'
 "------Insert-Use-Statements---------
 Plugin 'vim-php-namespace'
 "----------Auto-Completion-----------
@@ -39,8 +41,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'mattn/emmet-vim'
 "---------------Indent---------------
 Plugin 'yggdroot/indentline'
-"--------------Syntastic-------------
-Plugin 'scrooloose/syntastic'
+"---------------Solarized------------
+Plugin 'morhetz/gruvbox'
 "---------------Icons----------------
 Plugin 'ryanoasis/vim-devicons'
 " All of your Plugins must be added before the following line
