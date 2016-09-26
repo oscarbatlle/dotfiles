@@ -17,7 +17,7 @@ snippet smet
 	}
 
 snippet cmet
-	public function _construct(${1}) {
+	public function __construct(${1}) {
 		${2}
 	}
 
@@ -33,7 +33,7 @@ snippet rp
 	Route::post('${1}', '${2}');
 
 snippet rpa
-	Route::post('{$1}', function() {
+	Route::post('${1}', function() {
 		${2}
 	});
 
@@ -45,3 +45,4 @@ snippet rr
 
 snippet $
 	$this->${1}
+

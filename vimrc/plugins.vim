@@ -27,7 +27,7 @@ Plugin 'pangloss/vim-javascript'
 "------Insert-Use-Statements---------
 Plugin 'vim-php-namespace'
 "----------Auto-Completion-----------
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
 "-----------Automatic-PSR-2----------
 Plugin 'stephpy/vim-php-cs-fixer'
 "--------------Airlines--------------
@@ -45,6 +45,13 @@ Plugin 'yggdroot/indentline'
 Plugin 'morhetz/gruvbox'
 "---------------Icons----------------
 Plugin 'ryanoasis/vim-devicons'
+"---------------tobyS----------------
+Plugin 'tobyS/vmustache'
+Plugin 'tobyS/pdv'
+"-------------ultisnips--------------
+Plugin 'Sirver/ultisnips'
+"----------NERD-Commenter------------
+Plugin 'scrooloose/nerdcommenter'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

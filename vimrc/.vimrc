@@ -4,6 +4,8 @@
 " || Blog: http://oscarbatlle.com ||
 " ##################################
 
+" Enable filetype
+filetype plugin on
 "Set encoding type to show glyphs
 set encoding=utf8
 "Fix statline
@@ -119,6 +121,24 @@ nmap <C-e> :CtrlPMRUFiles<cr>
 set expandtab
 set softtabstop=4
 set shiftwidth=4
+"/
+"/ phpunit
+"/
+nmap ,t :!clear & phpunit %<cr>
+nmap ,m yiw:!phpunit --filter "<cr>
+"/
+"/ pdv
+"/
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
+"/
+"/ Utilsnips
+"/
+let g:UltiSnipsSnippetsDir = "~/.vim/snippets"
+let g:UltiSnipsSnippetDirectories=["~/.vim/snippets"]
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "/ NERDTree
 "/
 "Avoid Vinegar conflicts.
@@ -191,6 +211,7 @@ let g:grep_cmd_opts = '--line-numbers --noheading'
 "/
 " Automatic PSR-2 Formatting
 " NOTE: Requirements (php-cs-fixer) -> composer global require fabpot/php-cs-fixer
+let g:php_cs_fixer_path = "/usr/local/bin/php-cs-fixer.phar"
 let g:php_cs_fixer_level = "psr2"
 nnoremap <silent><Leader>l :call PhpCsFixerFixFile()<CR>
 nnoremap <silent><leader>la :call PhpCsFixerFixDirectory()<CR>

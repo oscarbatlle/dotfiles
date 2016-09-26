@@ -1,0 +1,90 @@
+snippet ng-am "NG1 Main Application Module"
+	(function() {
+		'use strict';
+
+		angular.module('$1', [
+			// Angular Modules - Reusable code
+			'$1.core',
+			'$1.widgets',
+
+			// Feature areas
+			'$1.dashboard'
+		]);
+
+	})();
+snippet ng-fm "NG1 Feature Module"
+	(function() {
+		'use strict';
+
+		angular.module('$1', []);
+
+	})();
+snippet ng-s "NG1 Factory Service"
+	(function() {
+		'use strict';
+
+		angular
+			.module('$1')
+			.factory('$2', ['$http', $2]);
+
+		function $2($http) {
+			var service = {
+					$3: $3
+				};
+
+			return service;
+
+			function $3() {
+			}
+		}
+	})();
+snippet ng-c "NG1 Controller"
+	(function() {
+		'use strict';
+
+		angular
+			.module('$1')
+			.controller('$2', $2);
+
+		/** @ngInject */
+		function $2() {
+			/*jshint validthis: true */
+			var vm = this;
+
+			activate();
+
+			function activate() {
+				return get$3().then(function() {
+					// Activated view
+				});
+			}
+
+			function get$3() {
+				// Get data
+			}
+		}
+	})();
+snippet ng-sw "NG1 Watch"
+	$scope.watch(function() {
+		return 'property';
+	}, function(newVal, oldVal) {
+		console.log(newVal + '---' + oldVal);
+	});
+snippet ng-d "NG1 Directive"
+	(function(){
+		use 'strict';
+
+		angular
+				.module('$1')
+				.directive('$2', $2);
+
+		/** @ngInject */
+		function $2() {
+				var directive = {
+						restrict: '$3',
+						templateUrl: '$4'
+				};
+
+				return directive;
+		}
+	})();
