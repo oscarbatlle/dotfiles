@@ -4,6 +4,8 @@
 " || Blog: http://oscarbatlle.com ||
 " ##################################
 
+" True colors support ( neovim 0.1.5 )
+set termguicolors
 " Enable filetype
 filetype plugin on
 "Set encoding type to show glyphs
