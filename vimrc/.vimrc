@@ -70,8 +70,8 @@ set guioptions-=e
 "Set left padding.
 set foldcolumn=2
 highlight FoldColumn guibg=none guifg=none
-"hi foldcolumn ctermbg=none
-"Set color for vetical bar / No borders.
+hi foldcolumn ctermbg=none
+"Set color for vertical bar / No borders.
 hi vertsplit ctermbg=bg ctermfg=bg
 "Enable status/tabline
 let g:airline#extensions#tabline#enabled = 1
