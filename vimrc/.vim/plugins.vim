@@ -1,45 +1,55 @@
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 "-------------Navigation-------------
-Plugin 'tpope/vim-vinegar'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
+Plug 'tpope/vim-vinegar'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'ctrlpvim/ctrlp.vim'
 "--------Auto-Close-Brackets---------
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 "---------Super-Fast-Search----------
-Plugin 'rking/ag.vim'
+Plug 'rking/ag.vim'
 "---------Search-And-Replace---------
-Plugin 'skwp/greplace.vim'
+Plug 'skwp/greplace.vim'
 "--------------Snippets--------------
-Plugin 'garbas/vim-snipmate'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
 "-Quoting/Parenthesizing made simple-
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 "------------PHP-Syntax--------------
-Plugin 'StanAngeloff/php.vim'
+Plug 'StanAngeloff/php.vim'
+"--------Javascript-Syntax-----------
+Plug 'pangloss/vim-javascript'
 "------Insert-Use-Statements---------
-Plugin 'vim-php-namespace'
+Plug 'vim-php-namespace'
 "----------Auto-Completion-----------
-Plugin 'ervandew/supertab'
+"Pluginin 'ervandew/supertab'
 "-----------Automatic-PSR-2----------
-Plugin 'stephpy/vim-php-cs-fixer'
+Plug 'stephpy/vim-php-cs-fixer'
 "--------------Airlines--------------
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "----------------Git-----------------
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 "--------------Tabular---------------
-Plugin 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 "---------------Emmet----------------
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 "---------------Indent---------------
-Plugin 'nathanaelkane/vim-indent-guides'
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+Plug 'yggdroot/indentline'
+"---------------Solarized------------
+Plug 'morhetz/gruvbox'
+"---------------Icons----------------
+Plug 'ryanoasis/vim-devicons'
+"---------------tobyS----------------
+Plug 'tobyS/vmustache'
+Plug 'tobyS/pdv'
+"-------------ultisnips--------------
+Plug 'Sirver/ultisnips'
+"----------NERD-Commenter------------
+Plug 'scrooloose/nerdcommenter'
+"-----------Autocomplete-------------
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'mhartington/deoplete-typescript'
+"------------tsc-syntax-------------
+Plug 'HerringtonDarkholme/yats.vim'
+call plug#end()            " required
