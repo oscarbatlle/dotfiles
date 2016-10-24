@@ -7,7 +7,7 @@
 " True colors support ( neovim 0.1.5 )
 set termguicolors
 " Enable filetype
-filetype plugin on
+" filetype plugin on
 "Set encoding type to show glyphs
 set encoding=utf8
 "Fix statline
@@ -28,8 +28,12 @@ set clipboard=unnamed
 set nocompatible
 "Set plugins directory
 so ~/.vim/plugins.vim
+" Use deoplete ( auto-complete )
+let g:deoplete#enable_at_startup = 1
+" Add javascript support
+let g:deoplete#sources#tss#javascript_support = 1
 "Enable syntax highlighting.
-syntax enable
+"syntax enable
 "Enable delete key on insert mode.
 set backspace=indent,eol,start
 "The default mapleader is '\' but a comma ',' is much better ;).
