@@ -52,4 +52,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'mhartington/deoplete-typescript'
 "------------tsc-syntax-------------
 Plug 'HerringtonDarkholme/yats.vim'
+"------------easy-align-------------
+Plug 'junegunn/vim-easy-align'
+"-------------neo-make--------------
+Plug 'neomake/neomake'
 call plug#end()            " required
