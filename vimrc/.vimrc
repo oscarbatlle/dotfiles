@@ -23,7 +23,8 @@ let g:loaded_statline_plugin = 1
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
 "I want to copy to the clipboard ;).
-set clipboard=unnamed
+"set clipboard=unnamed
+so ~/.vim/clipboard.vim
 "I want the latest Vim settings/options ;).
 set nocompatible
 "Set plugins directory
