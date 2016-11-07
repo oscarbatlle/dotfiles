@@ -1,28 +1,3 @@
-" ##################################
-" || Author: Oscar Batlle         ||
-" || Email: oscarbatlle@gmail.com ||
-" || Blog: http://oscarbatlle.com ||
-" ##################################
-
-" True colors support ( neovim 0.1.5 )
-set termguicolors
-" Enable filetype
-" filetype plugin on
-"Set encoding type to show glyphs
-set encoding=utf8
-"Fix statline
-if exists("g:loaded_statline_plugin")
-  finish
-endif
-"neo vim mouse support
-if !has('nvim')
-    set ttymouse=xterm2
-endif
-let g:loaded_statline_plugin = 1
-"Set fancy symbols for powerline and airline
-let g:Powerline_symbols = 'fancy'
-let g:airline_powerline_fonts = 1
-"I want to copy to the clipboard ;).
 "set clipboard=unnamed
 so ~/.vim/clipboard.vim
 "I want the latest Vim settings/options ;).
@@ -83,6 +58,23 @@ hi vertsplit ctermbg=bg ctermfg=bg
 "Enable status/tabline
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
+" airline theme
+let g:airline_theme = 'zenburn'
+
+" airline font
+let g:airline_powerline_fonts=1
+
+" airline extension
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#ctrlp#show_adjacent_modes = 1
+let g:airline#extensions#eclim#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+
+" tabline
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_close_button = 0
 " Select color
 hi Visual guifg=none guibg=#5c4d3d gui=none
 "--------------------Search--------------------"
@@ -201,13 +193,22 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 "--------------------Syntax---------------------"
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"--------------------Neomake--------------------"
+"Run Neomake on the current file on every write
+autocmd! BufWritePost * Neomake
+"Display errors in the status line
+set statusline+=\ %#ErrorMsg#%{neomake#statusline#QflistStatus('qf:\ ')}
+let g:neomake_place_signs = 1
+let g:neomake_open_list = 2
+
+let g:neomake_php_enabled_makers = ['php']
 "---------------------CTAGS---------------------"
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
