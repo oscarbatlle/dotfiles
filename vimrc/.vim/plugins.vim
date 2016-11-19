@@ -56,4 +56,8 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'junegunn/vim-easy-align'
 "-------------neo-make--------------
 Plug 'neomake/neomake'
+"----------tmux-clipboard-----------
+Plug 'roxma/vim-tmux-clipboard'
+"----------Syntax-Libraries---------
+Plug 'othree/javascript-libraries-syntax.vim'
 call plug#end()            " required

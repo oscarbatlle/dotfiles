@@ -1,5 +1,5 @@
-"set clipboard=unnamed
-so ~/.vim/clipboard.vim
+"Copy to clipboard ( tmux + register )
+"set clipboard+=unnamedplus
 "I want the latest Vim settings/options ;).
 set nocompatible
 "Set plugins directory
@@ -193,6 +193,7 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 "--------------------Syntax---------------------"
+let g:used_javascript_libs = 'underscore,backbone,angularjs,angularuirouter,angularui,react,vue'
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
@@ -205,7 +206,7 @@ nmap ga <Plug>(EasyAlign)
 autocmd! BufWritePost * Neomake
 "Display errors in the status line
 set statusline+=\ %#ErrorMsg#%{neomake#statusline#QflistStatus('qf:\ ')}
-let g:neomake_place_signs = 1
+let g:neomake_place_signs = 0
 let g:neomake_open_list = 2
 
 let g:neomake_php_enabled_makers = ['php']
