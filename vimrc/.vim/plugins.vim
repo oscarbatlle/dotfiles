@@ -60,4 +60,11 @@ Plug 'neomake/neomake'
 Plug 'roxma/vim-tmux-clipboard'
 "----------Syntax-Libraries---------
 Plug 'othree/javascript-libraries-syntax.vim'
+"------Html5-Syntax-Hightlight------
+Plug 'othree/html5.vim'
+"----------------Over-Vim-----------
+Plug 'osyo-manga/vim-over'
+"----------------CTAGS--------------
+Plug 'szw/vim-tags'
+
 call plug#end()            " required

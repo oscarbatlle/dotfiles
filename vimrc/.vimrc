@@ -270,6 +270,10 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr
 "/
 "/ CTAGS
 "/
+" Generate tags on file save
+let g:vim_tags_auto_generate = 1
+let g:vim_tags_directories = [".git", ".hg", ".svn", ".bzr", "_darcs", "CVS"]
+let g:vim_tags_main_file = 'tags'
 "ctags -R -> Generate tags for a particular project.
 "NOTE: Add tags/ to your .gitignore file.
 "CTRL + ] -> Takes you to where the method was defined.  
