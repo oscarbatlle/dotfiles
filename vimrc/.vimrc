@@ -274,6 +274,19 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr
 let g:vim_tags_auto_generate = 1
 let g:vim_tags_directories = [".git", ".hg", ".svn", ".bzr", "_darcs", "CVS"]
 let g:vim_tags_main_file = 'tags'
+"/
+"/ vim-gitgutter
+"/
+set updatetime=250
+let g:gitgutter_override_sign_column_highlight = 0
+" Customize colors
+highlight SignColumn ctermbg=none    " terminal Vim
+highlight SignColumn guibg=none      " gVim/MacVim
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=green
+highlight GitGutterChange ctermfg=yellow
+highlight GitGutterDelete ctermfg=red
+highlight GitGutterChangeDelete ctermfg=yellow
 "ctags -R -> Generate tags for a particular project.
 "NOTE: Add tags/ to your .gitignore file.
 "CTRL + ] -> Takes you to where the method was defined.  

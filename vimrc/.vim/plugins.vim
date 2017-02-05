@@ -66,5 +66,9 @@ Plug 'othree/html5.vim'
 Plug 'osyo-manga/vim-over'
 "----------------CTAGS--------------
 Plug 'szw/vim-tags'
+"----Syntax Highligth for Vue.js----
+Plug 'posva/vim-vue'
+"---------Git-Diff-gutter-----------
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()            " required
