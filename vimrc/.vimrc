@@ -27,6 +27,18 @@ set tabstop=8
 set expandtab
 set softtabstop=4
 set shiftwidth=4
+set autoindent " always set autoindenting on
+set copyindent " copy the previous indentation on autoindenting
+set showmode
+" Load filetype-specific indent files
+filetype indent on
+" Provide a graphical menu of all the matches you can cycle through
+set wildmenu
+" When your cursor moves over a parenthesis-like character, the matching one will be highlighted as well
+set showmatch
+" Search options
+set incsearch " search as characters are entered
+set hlsearch  " highlight matches
 "-------------------Visuals--------------------"
 "Use 256 colors.
 "set t_CO=256
@@ -39,7 +51,7 @@ let g:gruvbox_vert_split = 'bg2'
 "Macvim-specific line-height.
 set linespace=15
 "Set gui font.
-set guifont=Fira_Code:h13
+set guifont=Fira_Code:h16
 "Set background color for line numbers.
 highlight LineNr ctermfg=grey ctermbg=bg
 "Remove scrollbars.
@@ -146,6 +158,7 @@ let NERDTreeHijackNetrw = 0
 nmap <C-d> :NERDTreeToggle<cr>
 "Display hidden files
 let NERDTreeShowHidden=1
+let g:NERDTreeWinSize=30
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:webdevicons_conceal_nerdtree_brackets = 0
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
